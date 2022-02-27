@@ -4,79 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoapp"
 
     android:orientation="vertical"
+    android:background="@drawable/fondoapp"
 
+    tools:context=".loginapp.LoginActivity">
 
-    tools:context=".loginapp.MainActivity">
 
     <ImageView
+        android:layout_margin="20dp"
         android:layout_gravity="center"
         android:scaleType="centerCrop"
-        android:background="@drawable/logodisbos"
+        android:background="@drawable/logomp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     </ImageView>
-    <ImageView
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:background="@drawable/disboss"
-        android:layout_width="150dp"
-        android:layout_height="50dp">
-
-    </ImageView>
-
-
 
     <TextView
-        android:gravity="center"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:text="Registro:"
+        android:text="Iniciar sesion:"
 
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:shadowColor="@color/black"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="2" />
+        android:textColor="@color/black"
+        />
     <EditText
-        android:layout_margin="3dp"
-        android:padding="3dp"
-        android:background="@color/colorPrimary"
-        android:id="@+id/et_nombreyapellido"
-        android:hint="Nombre y Apellido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </EditText>
-    <EditText
-        android:layout_margin="3dp"
-        android:padding="3dp"
-        android:background="@color/colorPrimary"
-        android:id="@+id/et_direccion"
-        android:hint="Direccion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </EditText>
-    <EditText
-        android:layout_margin="3dp"
-        android:padding="3dp"
-        android:background="@color/colorPrimary"
-        android:id="@+id/et_telefono"
-        android:hint="Telefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </EditText>
-    <EditText
-        android:layout_margin="3dp"
-        android:padding="3dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         android:background="@color/colorPrimary"
         android:id="@+id/et_email"
         android:hint="Email"
@@ -84,44 +43,42 @@
         android:layout_height="wrap_content">
 
     </EditText>
-
     <EditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="3dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         android:background="@color/colorPrimary"
+        android:id="@+id/et_password"
+        android:inputType="textPassword"
         android:hint="password"
-        android:padding="3dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     </EditText>
 
-
-    <Button
-
-        android:textColor="#fff"
-        android:layout_margin="3dp"
-        android:background="@drawable/boton_redondo_tono2"
-        android:id="@+id/btn_registrarme"
-        android:text="Registrarme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </Button>
     <Button
         android:textColor="#fff"
-        android:layout_margin="3dp"
+        android:layout_margin="5dp"
         android:background="@drawable/boton_redondo_tono1"
-        android:id="@+id/btn_tengocuenta"
-        android:layout_marginTop="3dp"
-        android:text="Ya tengo cuenta"
+        android:id="@+id/btn_iniciar"
+        android:text="Iniciar sesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </Button>
-
-
     <Button
+        android:visibility="gone"
+        android:textColor="#fff"
+        android:layout_margin="5dp"
+        android:background="@drawable/boton_redondo_tono2"
+        android:id="@+id/btn_password_recovery"
+        android:layout_marginTop="4dp"
+        android:text="Olvide mi contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:visibility="gone"
         android:textColor="#fff"
         android:layout_margin="3dp"
         android:background="@drawable/boton_redondo_tono1"
@@ -134,15 +91,8 @@
     </Button>
 
 
-    <ProgressBar
-        android:visibility="gone"
-        android:id="@+id/pb_progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tv_error"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+
 
 
 

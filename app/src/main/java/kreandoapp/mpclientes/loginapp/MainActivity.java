@@ -54,15 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    EditText et_mail,et_pass,et_repass,et_direccion,et_telefono,et_nombreyapellido;
-    Button btn_registrar,btn_tengocuenta,btn_registroconface;
+    EditText et_mail,et_pass;
+    Button btn_iniciar,btn_password_recovery,btn_registroconface;
     FirebaseAuth firebaseAuth;
-
-    AwesomeValidation awesomeValidation;
     ProgressDialog progressDialog;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    AwesomeValidation awesomeValidation;
 
-    ProgressBar progressBar;
     detectorInternet internet;
 
     @Override
@@ -100,15 +97,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-
-        progressBar = findViewById(R.id.pb_progress_bar);
-
-
-
-
         et_mail = findViewById(R.id.et_email);
         et_pass = findViewById(R.id.et_password);
-
 
         et_mail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -131,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         et_pass.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -152,30 +143,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        et_nombreyapellido = findViewById(R.id.et_nombreyapellido);
-        et_direccion = findViewById(R.id.et_direccion);
-        et_telefono = findViewById(R.id.et_telefono);
-        btn_registrar = findViewById(R.id.btn_registrarme);
-        btn_tengocuenta = findViewById(R.id.btn_tengocuenta);
 
 
-
+        btn_iniciar = findViewById(R.id.btn_iniciar);
+        btn_password_recovery = findViewById(R.id.btn_password_recovery);
         firebaseAuth = FirebaseAuth.getInstance();
-
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
-
-        awesomeValidation.addValidation(this,R.id.et_nombreyapellido, RegexTemplate.NOT_EMPTY,R.string.invalid_name);
-        awesomeValidation.addValidation(this,R.id.et_telefono,".{7,}",R.string.invalid_telefono);
         awesomeValidation.addValidation(this,R.id.et_email, Patterns.EMAIL_ADDRESS,R.string.invalid_email);
-        awesomeValidation.addValidation(this,R.id.et_direccion, RegexTemplate.NOT_EMPTY,R.string.invalid_direccion);
         awesomeValidation.addValidation(this,R.id.et_password, ".{6,}",R.string.invalid_password);
-
-
         internet = new detectorInternet(this);
 
-        btn_tengocuenta.setOnClickListener(v -> {
+        btn_password_recovery.setOnClickListener(v -> {
             if (internet.estaConectado()) {
-                Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                Intent i = new Intent(MainActivity.this, RecuperarPassActivity.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
             }else {
@@ -184,31 +164,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        btn_iniciar.setOnClickListener(v -> {
 
-        String m_androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-        DatabaseReference myRef4 = database.getReference("idTelefono").child(m_androidId);
-        myRef4.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-                    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-                    if(firebaseUser == null){
-                        iralogin();
-                    }
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        btn_registrar.setOnClickListener(v -> {
-
-
-            if(internet.estaConectado()) {
+            if (internet.estaConectado()) {
 
 
                 progressDialog = new ProgressDialog(MainActivity.this);
@@ -217,36 +175,26 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog.getWindow().setBackgroundDrawableResource(
                         android.R.color.transparent
                 );
-                if (awesomeValidation.validate()) {
+                if(awesomeValidation.validate()) {
 
                     String mail = et_mail.getText().toString();
                     String pass = et_pass.getText().toString();
-                    String nombre = et_nombreyapellido.getText().toString();
-                    String direccion = et_direccion.getText().toString();
-                    String telefono = et_telefono.getText().toString();
 
-                    firebaseAuth.createUserWithEmailAndPassword(mail, pass).
+                    firebaseAuth.signInWithEmailAndPassword(mail, pass).
                             addOnCompleteListener(task -> {
-
-
                                 if (task.isSuccessful()) {
                                     progressDialog.dismiss();
-
-                                    hacerlogin(mail, pass,direccion,telefono,nombre);
-                                    //userunico(nombre, mail, direccion, telefono);
-
-
-                                    Toast.makeText(MainActivity.this, "Registro Exitoso!", Toast.LENGTH_SHORT).show();
+                                    et_mail.setText("");
+                                    et_pass.setText("");
+                                    irahome();
                                 } else {
-                                    progressDialog.dismiss();
                                     String errorCode = ((FirebaseAuthException) task.getException()).getErrorCode();
                                     dameToastdeerror(errorCode);
+                                    progressDialog.dismiss();
 
                                 }
-
-
                             });
-                } else {
+                }else {
                     progressDialog.dismiss();
                     Toast.makeText(this, "Complete todos los datos", Toast.LENGTH_SHORT).show();
                 }
@@ -255,8 +203,8 @@ public class MainActivity extends AppCompatActivity {
                 snackbar.show();
 
             }
-        });
 
+        });
         btn_registroconface = findViewById(R.id.btn_registrarconface);
         btn_registroconface.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -268,33 +216,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     }//fin oncreate!!
-
-
-
-    private void iralogin() {
-        Intent i = new Intent(this, LoginActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
-    }
-
-    private void hacerlogin(String mail,String pass,String direccion,String telefono,String nombre) {
-        firebaseAuth.signInWithEmailAndPassword(mail,pass).
-                addOnCompleteListener(task -> {
-                    if(task.isSuccessful()){
-
-                        Intent i = new Intent(this, home1.class);
-                        i.putExtra("direccion",direccion);
-                        i.putExtra("telefono",telefono);
-                        i.putExtra("nombre",nombre);
-
-                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(i);
-                    }else {
-                        Toast.makeText(this, "Error en el login", Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
 
     private void dameToastdeerror(String error) {
 
@@ -377,19 +300,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void goMainScreen() {
-        Intent i = new Intent(this, home1.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
-    }
 
     private void printKeyHash() {
         try {
-            PackageInfo info = getPackageManager().getPackageInfo("kreandoapp.disbos",PackageManager.GET_SIGNATURES);
+            PackageInfo info = getPackageManager().getPackageInfo("kreandoapp.petshop", PackageManager.GET_SIGNATURES);
             for(Signature signature :info.signatures){
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
-                Log.d("KeyHas",Base64.encodeToString(md.digest(), Base64.DEFAULT));
+                Log.d("KeyHas", Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -398,8 +316,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void irahome() {
+        Intent i = new Intent(this, home1.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
+    }
 
-
+    private void iraMain() {
+        Intent i = new Intent(this, MainActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
+    }
 
 
 }
