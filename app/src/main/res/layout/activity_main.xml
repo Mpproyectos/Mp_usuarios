@@ -20,7 +20,17 @@
         android:layout_height="wrap_content">
 
     </ImageView>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="App Usuario:"
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
     <TextView
         android:layout_gravity="center"
         android:layout_margin="10dp"
@@ -33,7 +43,7 @@
         android:textColor="@color/black"
         />
     <EditText
-        android:text="kreandoapp@gmail.com"
+
         android:layout_margin="10dp"
         android:padding="10dp"
         android:background="@color/colorPrimary"
@@ -44,7 +54,7 @@
 
     </EditText>
     <EditText
-        android:text="123456"
+
         android:layout_margin="10dp"
         android:padding="10dp"
         android:background="@color/colorPrimary"
