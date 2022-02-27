@@ -216,7 +216,7 @@ public class Crear_nodo extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), home1.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-        finish();
+
     }
 
     private void notificarsupervisor(String idadmin,String nodo) {

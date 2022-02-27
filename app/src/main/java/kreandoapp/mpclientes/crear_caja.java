@@ -1,5 +1,6 @@
 package kreandoapp.mpclientes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -87,31 +88,28 @@ public class crear_caja extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "El nombre caja esta vacio", Toast.LENGTH_LONG).show();
 
                 }else{
-                    SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
 
-                    String sn = sh.getString("nombre_supervisor", "");
-                    String ids = sh.getString("id_supervisor", "");
-                    String idnodo = sh.getString("idnodo", "");
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference r1 = database.getReference();
+                    Query query = r1.child("Cajas").orderByChild("nombre_caja").equalTo(et_nombre_caja.getText().toString());
+                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (!dataSnapshot.exists()){
+                                //metodo cargar
+                                cargarCaja();
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Esta Caja ya existe.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
 
-                    final Calendar c1 = Calendar.getInstance();
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
-                    final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                        }
+                    });
 
 
-
-                    String push = cajaref.push().getKey();
-                    ModeloCaja caj = new ModeloCaja(
-                            et_nombre_caja.getText().toString(),push,dateFormat.format(c1.getTime()),timeFormat.format(c1.getTime()),ids,sn,user.getUid(),"creacion",idnodo,catesele,
-                            "","","","","","",
-                            "","","","","","","","","",0,""
-                    );
-                    ModeloLastCaja last = new ModeloLastCaja(push,user.getUid());
-
-                    cajaref.child(push).setValue(caj);
-                    lastcajaref.child(user.getUid()).setValue(last);
-
-                    finish();
                 }
 
             }
@@ -164,5 +162,33 @@ public class crear_caja extends AppCompatActivity {
 
 
     }//fin del oncreate!
-    
+
+    private void cargarCaja() {
+        SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+
+        String sn = sh.getString("nombre_supervisor", "");
+        String ids = sh.getString("id_supervisor", "");
+        String idnodo = sh.getString("idnodo", "");
+
+        final Calendar c1 = Calendar.getInstance();
+
+        final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+
+
+        String push = cajaref.push().getKey();
+        ModeloCaja caj = new ModeloCaja(
+                et_nombre_caja.getText().toString(),push,dateFormat.format(c1.getTime()),timeFormat.format(c1.getTime()),ids,sn,user.getUid(),"creacion",idnodo,catesele,
+                "","","","","","",
+                "","","","","","","","","",0,""
+        );
+        ModeloLastCaja last = new ModeloLastCaja(push,user.getUid());
+
+        cajaref.child(push).setValue(caj);
+        lastcajaref.child(user.getUid()).setValue(last);
+
+        finish();
+    }
+
 }
