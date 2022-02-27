@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modoadmin.opciones">
+
+    <include layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:text="Modo Delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_delivery_off"
+            android:textSize="25dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="6"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:background="@drawable/bgbtnopcion"
+            android:text="Desactivado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_delivery_on"
+            android:textSize="25dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="6"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:background="@drawable/bgbtnopcion"
+            android:text="Activado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:text="Modo Reservas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_reservaoff"
+            android:textSize="25dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="6"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:background="@drawable/bgbtnopcion"
+            android:text="Desactivado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_reservaon"
+            android:textSize="25dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="6"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:background="@drawable/bgbtnopcion"
+            android:text="Activado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

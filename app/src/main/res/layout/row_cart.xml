@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardElevation="4dp">
+
+
+    <LinearLayout
+        android:id="@+id/view_foreground"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:id="@+id/img_cart"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+        <ProgressBar
+
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_cantidades"
+            android:textColor="@color/colorAccent"
+            android:text="1"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:id="@+id/tv_nombre_producto"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical|start"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:text="Food 01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:id="@+id/cart_item_Price"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical|start"
+                android:textAllCaps="true"
+                android:textStyle="italic"
+                android:text="100.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    <ImageButton
+
+        android:backgroundTint="@color/colorAccent"
+        android:src="@drawable/ic_delete"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginRight="16dp"
+        android:id="@+id/cart_item_count"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+

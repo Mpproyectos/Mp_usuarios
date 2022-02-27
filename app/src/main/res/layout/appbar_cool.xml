@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/tb_toolbar_cool"
+    android:background="@color/colorAccent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    >
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+
+            android:background="@drawable/boton_redondo"
+            android:id="@+id/btn_volverAtras"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_volver" />
+
+        <TextView
+            android:layout_weight="3"
+            android:id="@+id/tv_titulo_toolbar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageButton
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_editar"
+            android:id="@+id/btn_editar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_margin="@dimen/fab_margin"
+             />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

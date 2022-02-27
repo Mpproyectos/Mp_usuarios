@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".modoadmin.ModoAdmin">
+
+    <include layout="@layout/toolbar"/>
+
+    <Button
+        android:id="@+id/btn_nuevaCategoria"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Nueva Categoria"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_subcategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        android:text="Nueva Sub categoria"
+        android:textColor="@color/white" />
+
+    <Button
+    android:id="@+id/btn_nuevoProducto"
+    android:layout_margin="5dp"
+    android:textColor="@color/white"
+    android:text="Nuevo Producto"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+
+
+
+    <Button
+        android:id="@+id/btn_verestadopedidos"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="ver Estado pedidos"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_NuevoCoctel"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Nuevo Coctel"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_agregarimgAcoctel"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Añadir img a coctel"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_crearpromo"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Crear promo"
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_estadolocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/green"
+        android:text="Estado del local"
+        android:textColor="@color/white" />
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_estaventas"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Estadistica ventas"
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_crearCupon"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Crear cupon"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_Promo_primeras_c"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Promo primeras compras"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_ver_cupones"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Ver cupones creados"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_editar_demora"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Editar Demoras app"
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_estado_modo_envio"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Configurar MODO Envio y Cupones"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_editar_modo_envio"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Editar valores envio"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_modozona"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Modo zona"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_modoGps"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:text="Modo Gps"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+
+</ScrollView>
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".continuar_nodo">
+
+    <include layout="@layout/appbar_cool"></include>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_crear_caja"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:text="Crear Nueva Caja"
+
+        android:background="@drawable/borde2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+
+   <RelativeLayout
+        android:id="@+id/rv_rela"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_cajas"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       </androidx.recyclerview.widget.RecyclerView>
+
+       <Button
+           android:visibility="gone"
+           android:id="@+id/btn_nodoterminado"
+           android:layout_width="match_parent"
+
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp"
+
+           android:layout_weight="1"
+           android:background="@drawable/borde3"
+           android:elevation="12dp"
+           android:shadowColor="@color/black"
+           android:shadowDx="2"
+           android:shadowDy="2"
+           android:shadowRadius="5"
+
+           android:text="Terminar Nodo"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:textSize="16dp" />
+
+
+   </RelativeLayout>
+
+</LinearLayout>

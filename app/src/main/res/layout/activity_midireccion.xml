@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoapp"
+    android:layout_gravity="center"
+    tools:context=".clientes.misdatos">
+
+    <include layout="@layout/appbar_cool"></include>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:id="@+id/et_ultimadireccion"
+            android:layout_margin="10dp"
+            android:hint="Mi direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            />
+
+        <EditText
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:inputType="phone"
+            android:id="@+id/et_telefono"
+            android:layout_margin="10dp"
+            android:hint="Mi telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+        <Button
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:id="@+id/btn_actualizardire"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/borde"
+            android:text="Actualizar mis datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

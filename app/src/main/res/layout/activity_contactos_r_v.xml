@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoapp"
+    tools:context=".ContactosRVActivity">
+
+    <include layout="@layout/appbar_cool"></include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/btn_compartirubicacion"
+
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/ic_share_black_24dp"
+        android:textColor="#ffff"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/borde"
+        android:text=" Compartir ubicación del local"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_redes"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

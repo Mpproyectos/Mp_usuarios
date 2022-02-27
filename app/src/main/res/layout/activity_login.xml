@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="@drawable/fondoapp"
+
+    tools:context=".loginapp.LoginActivity">
+
+
+    <ImageView
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:background="@drawable/logodisbos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+    <ImageView
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:background="@drawable/disboss"
+        android:layout_width="150dp"
+        android:layout_height="50dp">
+
+    </ImageView>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Iniciar sesion:"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2" />
+    <EditText
+
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/et_email"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <EditText
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/et_password"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    <Button
+        android:textColor="#fff"
+        android:layout_margin="5dp"
+        android:background="@drawable/boton_redondo_tono1"
+        android:id="@+id/btn_iniciar"
+        android:text="Iniciar sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:textColor="#fff"
+        android:layout_margin="5dp"
+        android:background="@drawable/boton_redondo_tono2"
+        android:id="@+id/btn_password_recovery"
+        android:layout_marginTop="4dp"
+        android:text="Olvide mi contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:visibility="gone"
+        android:textColor="#fff"
+        android:layout_margin="3dp"
+        android:background="@drawable/boton_redondo_tono1"
+        android:id="@+id/btn_registrarconface"
+        android:layout_marginTop="3dp"
+        android:text="Registrate con tu facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+
+
+
+
+
+
+</LinearLayout>
+

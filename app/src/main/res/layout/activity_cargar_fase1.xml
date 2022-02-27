@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".clientes.CargarFase1Activity">
+
+    <include layout="@layout/appbar_cool"></include>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_select_foto"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="Tomar fotografia"
+
+            android:background="@drawable/borde2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            />
+
+        <ImageView
+            android:id="@+id/img_foto"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_subirproducto"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="Subir Foto Fase 1"
+
+            android:background="@drawable/borde3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

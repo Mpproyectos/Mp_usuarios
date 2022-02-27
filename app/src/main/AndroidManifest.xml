@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kreandoapp.mpclientes">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="stateVisible|adjustResize"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".clientes.DetalleNodoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fase2okActivity"
+            android:exported="false" />
+        <activity
+            android:name=".clientes.Fase1okActivity"
+            android:exported="false" />
+        <activity
+            android:name=".clientes.CargarFase2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".clientes.ProcesoVenta.DetectandoUbicacion2"
+            android:exported="false" />
+        <activity
+            android:name=".clientes.CargarFase1Activity"
+            android:exported="false"
+            android:parentActivityName=".clientes.home1" />
+        <activity
+            android:name=".crear_caja"
+            android:exported="false" />
+        <activity
+            android:name=".continuar_nodo"
+            android:exported="false"
+            android:parentActivityName=".clientes.home1" />
+        <activity
+            android:name=".Crear_nodo"
+            android:exported="false" />
+        <activity android:name=".ContactosRVActivity" />
+        <activity android:name=".modoadmin.encuestasPedidosActivity" />
+        <activity android:name=".modoadmin.modoGPS.DetectGpsactualadminActivity" />
+        <activity android:name=".modoadmin.modoGPS.ModoGpsEdicionActivity" />
+        <activity android:name=".modoadmin.Coctels.EliminarCatecoctelccActivity" />
+        <activity android:name=".modoadmin.Coctels.eliminarcoctelimgActivity" />
+        <activity android:name=".modoadmin.Coctels.EditarimgCoctelcateActivity" />
+        <activity android:name=".modoadmin.Coctels.EditarDatosCateCoctelActivity" />
+        <activity android:name=".modoadmin.Coctels.EditarimgcoctelActivity" />
+        <activity android:name=".modoadmin.Coctels.EditarDatosCoctelActivity" />
+        <activity android:name=".clientes.verImgsCoctelActivity" />
+        <activity android:name=".modoadmin.Coctels.AgregarimgacoctelActivity" />
+        <activity android:name=".modoadmin.Coctels.NuevoCoctelActivity" />
+        <activity android:name=".clientes.PreparaCoctelActivity" />
+        <activity android:name=".loginapp.RegistroFacebookActivity" />
+        <activity android:name=".modoadmin.EditarCategoria.EliminarSubcategoriaActivity" />
+        <activity android:name=".modoadmin.EditarCategoria.EditarsubCategoriaimgActivity" />
+        <activity android:name=".modoadmin.EditarCategoria.EditarsubCategoriaActivity" />
+        <activity android:name=".clientes.ProcesoVenta.ListaSubcategoriasActivity" />
+        <activity android:name=".modoadmin.Productos.NuevoSubCategoriaActivity" />
+        <activity
+            android:name=".modoadmin.Zonas.NuevaZonaActivity"
+            android:parentActivityName=".modoadmin.Zonas.ModozonaActivity" />
+        <activity
+            android:name=".modoadmin.Zonas.EditarZonasActivity"
+            android:parentActivityName=".modoadmin.Zonas.ModozonaActivity" />
+        <activity
+            android:name=".modoadmin.Zonas.ModozonaActivity"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity
+            android:name=".modoadmin.EditarCategoria.EditarCategoriaImgActivity"
+            android:parentActivityName=".clientes.home1" />
+        <activity
+            android:name=".modoadmin.EditarCategoria.editarCategoriaActivity"
+            android:parentActivityName=".clientes.home1" />
+        <activity android:name=".clientes.PedidoRetirarActivity" />
+        <activity
+            android:name=".clientes.satisActivity"
+            android:parentActivityName=".clientes.home1" />
+        <activity
+            android:name=".modoadmin.Demoras.EditarDemoraActivity"
+            android:parentActivityName=".modoadmin.Demoras.EditarDemorasActivity" />
+        <activity
+            android:name=".modoadmin.Demoras.CrearDemoraActivity"
+            android:parentActivityName=".modoadmin.Demoras.EditarDemorasActivity" />
+        <activity
+            android:name=".modoadmin.Demoras.EditarDemorasActivity"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity
+            android:name=".modoadmin.Cupones.verDetalleCupActivity"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity
+            android:name=".modoadmin.Cupones.VertodoslosCuponesActivity"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity
+            android:name=".modoadmin.Promo.PromoPrimerasComprasActivity"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity
+            android:name=".modoadmin.Cupones.crear_cupon_admin"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity android:name=".clientes.ProcesoVenta.DetectandoUbicacionActivity" />
+        <activity android:name=".loginapp.RecuperarPassActivity" />
+        <activity
+            android:name=".loginapp.LoginActivity"
+            android:parentActivityName=".loginapp.MainActivity" />
+        <activity android:name=".clientes.ProcesoVenta.DireccionActivity" />
+        <activity
+            android:name=".clientes.DetallepedidoUserActivity"
+            android:parentActivityName=".clientes.misPedidos" />
+        <activity android:name=".modoadmin.Envio.EditarCalcularEnvioActivity" />
+        <activity android:name=".modoadmin.Envio.ModoCalcularenvioActivity" />
+        <activity android:name=".modoadmin.EditarCategoria.NuevaCategoriaActivity" />
+        <activity android:name=".clientes.misdatosobligatorios" />
+        <activity android:name=".clientes.ubicacion_actual" />
+        <activity android:name=".modoadmin.modomail" />
+        <activity android:name=".modoadmin.opciones" />
+        <activity android:name=".modoadmin.EditarcontactoActivity" />
+        <activity android:name=".clientes.reservaenviada" />
+        <activity android:name=".modoadmin.Promo.eliminarpromo" />
+        <activity android:name=".modoadmin.Productos.eliminarproducto" />
+        <activity android:name=".modoadmin.EditarCategoria.eliminarcategoria" />
+        <activity android:name=".modoadmin.Productos.editarimagenActivity" />
+        <activity android:name=".clientes.cancelarPedidoActivity" />
+        <activity android:name=".prueba.loadimgdownloadActivity" />
+        <activity
+            android:name=".modoadmin.Productos.editarproductoActivity"
+            android:parentActivityName=".clientes.home1" />
+        <activity
+            android:name=".clientes.contactoActivity"
+            android:parentActivityName=".clientes.home1" />
+        <activity android:name=".clientes.pedidoenviadoActivity" />
+        <activity android:name=".modoadmin.Promo.CrearpromoActivity" />
+        <activity android:name=".clientes.promociones" />
+        <activity android:name=".modoadmin.Promo.EnviarPromos" />
+        <activity
+            android:name=".MessageActivity"
+            android:parentActivityName=".clientes.home1" />
+        <activity
+            android:name=".MessageActivity2"
+            android:parentActivityName=".clientes.home1" />
+        <activity
+            android:name=".clientes.misPedidos"
+            android:parentActivityName=".loginapp.MainActivity" />
+        <activity
+            android:name=".modoadmin.modoestado"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity
+            android:name=".clientes.misdatos"
+            android:parentActivityName=".loginapp.MainActivity" />
+        <activity
+            android:name=".modoadmin.detallePedido"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+        <activity
+            android:name=".modoadmin.todoslospedido"
+            android:parentActivityName=".modoadmin.todoslospedido" />
+        <activity
+            android:name=".modoadmin.ModoAdmin"
+            android:parentActivityName=".loginapp.MainActivity" />
+        <activity android:name=".loginapp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".clientes.home1"
+            android:label="@string/title_activity_home1"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".clientes.ProcesoVenta.listaProductos"
+            android:parentActivityName=".clientes.ProcesoVenta.ListaSubcategoriasActivity" />
+        <activity
+            android:name=".clientes.ProcesoVenta.Carrito"
+            android:parentActivityName=".loginapp.MainActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default_gategoria theme has no action bar) -->
+        <activity
+            android:name=".modoadmin.Productos.nuevoProducto"
+            android:parentActivityName=".modoadmin.ModoAdmin" />
+
+        <service android:name=".FcmInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FcmMessaginService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

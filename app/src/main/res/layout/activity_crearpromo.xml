@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".modoadmin.Promo.CrearpromoActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/et_nombre_promo"
+        android:hint="Nombre promo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/et_descripcion_promo"
+        android:hint="Descripcion promo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:inputType="number"
+        android:layout_margin="10dp"
+        android:id="@+id/et_precio_promo"
+        android:hint="Precio de la promo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="@color/white"
+
+        android:background="@color/bgrowbackgr"
+        android:id="@+id/btn_elige_foto"
+        android:text="Elige foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+
+        android:id="@+id/img_promo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp" />
+    <Button
+        android:textColor="@color/white"
+
+        android:background="@color/blue"
+        android:id="@+id/btn_subirpromo"
+        android:text="Subir Nueva Promo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</LinearLayout>

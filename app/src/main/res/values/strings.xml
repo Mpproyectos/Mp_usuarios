@@ -1,0 +1,23 @@
+<resources>
+    <!--    <string name="app_name">Pet shop demo </string>-->
+    <string name="app_name">MP usuarios</string>
+    <string name="facebook_app_id">1103388286757849</string>
+    <string name="fb_login_protocol_scheme">fb1103388286757849</string>
+
+
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home1">MP usuarios</string>
+    <string name="invalid_name">Ingrese un nombre valido</string>
+    <string name="invalid_telefono">Ingrese un telefono valido</string>
+    <string name="invalid_email">Ingrese un mail valido</string>
+    <string name="invalid_direccion">Ingrese un direccion valida</string>
+    <string name="invalid_password">Ingrese un password mayor a 6 digitos</string>
+    <string name="re_invalid_password">Las contraseñas tienen que ser iguales</string>
+
+</resources>

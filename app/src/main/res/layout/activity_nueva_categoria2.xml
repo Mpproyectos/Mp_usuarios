@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".modoadmin.EditarCategoria.NuevaCategoriaActivity">
+    <include layout="@layout/toolbar"/>
+
+    <EditText
+
+        android:id="@+id/et_nombre_categoria"
+        android:hint="Nombre categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:background="@color/bgrowbackgr"
+        android:id="@+id/btn_elige_foto"
+        android:text="Elige foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+
+        android:id="@+id/img_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp" />
+    <Button
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:background="@color/blue"
+        android:id="@+id/btn_subircategoria"
+        android:text="Subir Categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:background="@color/purple"
+        android:id="@+id/btn_eliminar"
+        android:text="Eliminar foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

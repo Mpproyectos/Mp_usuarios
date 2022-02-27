@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/mi_direccion"
+            android:icon="@drawable/ic_place_black_24dp"
+            android:title="Mis Datos" />
+        <item
+            android:id="@+id/cart"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Carrito de compras" />
+        <item
+            android:id="@+id/mispedidos"
+            android:icon="@drawable/ic_local_dining_black_24dp"
+            android:title="Mis pedidos" />
+        <item
+            android:id="@+id/mispromos"
+            android:icon="@drawable/ic_notifications_active_black_24dp"
+            android:title="Promociones" />
+        <item
+            android:id="@+id/preparaciones"
+            android:icon="@drawable/copa_de_vino"
+            android:title="Prepara tu coctel" />
+        <item
+            android:id="@+id/contacto"
+            android:icon="@drawable/ic_contact_mail_black_24dp"
+            android:title="Contacto" />
+    </group>
+
+    <!--<item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>-->
+
+</menu>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/fondoapp"
+    tools:context=".loginapp.RecuperarPassActivity">
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:background="@drawable/logodisbos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+    <ImageView
+        android:scaleType="centerCrop"
+        android:background="@drawable/disboss"
+        android:layout_width="150dp"
+        android:layout_height="50dp">
+
+    </ImageView>
+
+
+    <TextView
+        android:layout_margin="10dp"
+        android:text="Recuperar contraseña:"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2" />
+    <EditText
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/et_email"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+
+    <Button
+        android:textColor="#fff"
+        android:layout_margin="5dp"
+        android:background="@drawable/boton_redondo_tono1"
+        android:id="@+id/btn_enviarpass"
+        android:text="Enviar contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+
+
+
+
+
+
+</LinearLayout>
+

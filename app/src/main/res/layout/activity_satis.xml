@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoapp"
+    tools:context=".clientes.satisActivity">
+    <include layout="@layout/toolbar"></include>
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:text="Recibiste tu pedido?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+       app:cardCornerRadius="10dp"
+        android:elevation="4dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/Radio_group"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_si"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="SI"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            </RadioButton>
+            <RadioButton
+            android:id="@+id/rb_no"
+            android:layout_weight="1"
+            android:text="NO"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+        </RadioButton>
+
+        </RadioGroup>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:text="Dejanos tu comentario:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_mensaje"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escribe un mensaje.."
+               >
+
+            </EditText>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:textColor="#fff"
+        android:text="Enviar"
+        android:layout_margin="10dp"
+        android:background="@drawable/boton_redondo_tono2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+</LinearLayout>

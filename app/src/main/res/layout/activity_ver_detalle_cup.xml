@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E2E2e2"
+    tools:context=".modoadmin.Cupones.verDetalleCupActivity">
+    <include layout="@layout/toolbar"></include>
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="MODO CANCEL:"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:gravity="center"
+                android:text="0"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/tv_modo_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="MODO CUPON:"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:gravity="center"
+                android:text="0"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/tv_modo_cupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Contador de uso:"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:gravity="center"
+                android:text="0"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/tv_contador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_condicion"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Condicion para uso:"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <EditText
+
+                android:inputType="number"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:id="@+id/et_condicion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_descuento"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Descuento del cupon:"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <EditText
+
+                android:inputType="number"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:id="@+id/et_monto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_porcentaje"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Porcentaje:"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <EditText
+
+                android:inputType="number"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:id="@+id/et_porcentaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:layout_gravity="center"
+                android:text="Estado:"
+
+                android:textSize="14sp"
+                android:textColor="#000"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:id="@+id/tv_estado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <Button
+
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:id="@+id/btn_activo"
+                android:textColor="#fff"
+                android:background="@drawable/boton_redondo_tono1"
+                android:text="Activo"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+            </Button>
+            <Button
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:id="@+id/btn_desac"
+                android:textColor="#fff"
+                android:background="@drawable/boton_redondo_tono1"
+                android:text="Desac."
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+            </Button>
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:textColor="#fff"
+        android:text="Guardar Cambios"
+        android:layout_margin="10dp"
+        android:id="@+id/btn_save"
+        android:background="@drawable/boton_redondo_tono2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:visibility="gone"
+        android:textColor="#fff"
+        android:text="Eliminar cupon"
+        android:layout_margin="10dp"
+        android:id="@+id/btn_eliminar"
+        android:background="@drawable/boton_redondo_rojo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+
+        android:textColor="#fff"
+        android:text="Copiar cupon"
+        android:layout_margin="10dp"
+        android:id="@+id/btn_copiar"
+        android:background="@drawable/boton_redondo_tono2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+</LinearLayout>

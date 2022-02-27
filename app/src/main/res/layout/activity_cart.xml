@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoapp"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".clientes.ProcesoVenta.Carrito">
+
+    <include layout="@layout/appbar_cool" />
+    <LinearLayout
+        android:layout_margin="17dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tb_toolbar_cool"
+        android:id="@+id/rv_envio"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:id="@+id/card_precio_envio"
+            app:cardCornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/tv_envio"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <ProgressBar
+                android:id="@+id/progres_precio"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </ProgressBar>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/rv_envio"
+        android:id="@+id/rv_listCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        android:layout_margin="14dp"
+        android:visibility="gone"
+        android:id="@+id/card_envio_monto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+
+                android:background="@drawable/envio"
+                android:layout_width="70dp"
+                android:layout_height="54dp">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_txt_costo"
+                android:layout_marginLeft="6dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tv_costo_envio"
+                android:layout_marginLeft="6dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:layout_margin="14dp"
+        android:elevation="10dp"
+        android:layout_below="@+id/rv_listCart"
+        android:id="@+id/check_cupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+
+                android:id="@+id/et_dato_cupon"
+                android:textSize="18sp"
+                android:layout_gravity="bottom"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            </EditText>
+            <Button
+
+                android:id="@+id/btn_consultar_cupon"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                android:padding="2dp"
+                android:textSize="15dp"
+                android:background="@drawable/boton_redondo_tono2"
+                android:text="Aplicar Cupón"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_cupon_felicidades"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_linea1"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tv_linea2"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/black"
+
+                android:text="Segui comprando y disfruta de nuestros cupones a clientes habituales. Disbos!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:layout_margin="12dp"
+        android:elevation="10dp"
+        android:layout_below="@+id/rv_listCart"
+        android:id="@+id/cardmodozona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:background="@drawable/envio"
+                android:layout_width="70dp"
+                android:layout_height="54dp">
+
+            </ImageView>
+            <Spinner
+                android:spinnerMode="dialog"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:id="@+id/id_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_retirar_sucursal_cardzona"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:id="@+id/ll_total"
+        android:layout_margin="12dp"
+        android:layout_below="@id/check_cupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_txt_total"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+
+            android:visibility="gone"
+            android:id="@+id/tv_total_pedido"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/ll_total2"
+       android:backgroundTint="@color/colorPrimary"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+
+            android:layout_margin="12dp"
+            android:layout_below="@id/check_cupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:id="@+id/tv_txt_total_desc"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+
+
+                android:id="@+id/tv_total_pedido_desc"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:layout_margin="14dp"
+        android:id="@+id/ll_descuento"
+        android:layout_below="@+id/ll_total"
+        android:elevation="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_titulo_desc"
+            android:layout_margin="4dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="#000">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_condiciones"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_add_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_descuento"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="17dp"
+
+        android:background="@drawable/borde_conblanco"
+        android:text="Agregar más productos"
+        android:textColor="@color/colorPrimary">
+
+    </Button>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_continuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/boton_redondo_tono2"
+        android:text="Continuar"
+        android:textColor="@color/white">
+
+    </Button>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/mykonten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bgkonten"
+        android:elevation="4dp"
+
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+       >
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_info_total"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:visibility="gone"
+                android:background="#ffffff"
+                android:layout_marginLeft="6dp"
+                android:id="@+id/total"
+
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <ProgressBar
+
+            android:id="@+id/progress_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <Button
+                android:visibility="gone"
+
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:layout_marginBottom="4dp"
+                android:elevation="5dp"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="6"
+                android:text="Retirar por sucursal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:id="@+id/btn_retirar"
+                android:layout_weight="1"
+                android:background="@drawable/bgbtnopcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:visibility="gone"
+                android:layout_weight="1"
+
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_send_black_24dp"
+                android:layout_marginBottom="4dp"
+                android:elevation="5dp"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="6"
+                android:text="Enviar a mi domicilio"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:id="@+id/btn_enviarpedido"
+
+                android:background="@drawable/bgbtnopcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_mitelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_midireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_id_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:id="@+id/tv_datos"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:id="@+id/tv_cabezera"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:id="@+id/tv_cabezera_retira"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_textubicacionurl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_countmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

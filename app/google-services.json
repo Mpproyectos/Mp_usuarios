@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "40480604138",
+    "firebase_url": "https://distribuidoramyv-30ba2.firebaseio.com",
+    "project_id": "distribuidoramyv-30ba2",
+    "storage_bucket": "distribuidoramyv-30ba2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40480604138:android:1ee5ab79e4c8856aa3fc93",
+        "android_client_info": {
+          "package_name": "kreandoapp.mpclientes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40480604138-48eumu0rt565bg1gl2vv03t7ou2aguip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kreandoapp.mpclientes",
+            "certificate_hash": "e47ac58de504209f6dcba043d00510200d8e450c"
+          }
+        },
+        {
+          "client_id": "40480604138-9du45memego65u19keurcamm3frugl10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLoQAu3sE0N1kg7bjD5JgQIIDPV8H9g_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40480604138-9du45memego65u19keurcamm3frugl10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

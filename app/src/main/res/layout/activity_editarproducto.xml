@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".modoadmin.Productos.editarproductoActivity">
+
+    <include layout="@layout/toolbar"></include>
+
+<EditText
+    android:layout_margin="10dp"
+    android:id="@+id/et_tituloprod"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/et_detalleprod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:inputType="number"
+        android:layout_margin="10dp"
+        android:id="@+id/et_precioprod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:inputType="numberDecimal"
+        android:layout_margin="10dp"
+        android:id="@+id/et_orden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="Actualizar Datos"
+        android:background="@color/colorPrimary"
+        android:id="@+id/btn_actualizardatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+
+        android:layout_marginTop="24dp"
+        android:text="Cambiar Imagen"
+        android:background="@color/colorPrimary"
+        android:id="@+id/btn_actualizarfotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".clientes.home1"
+    android:orientation="vertical"
+
+    android:background="@drawable/fondoapp"
+    tools:showIn="@layout/app_bar_home1">
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/card_texto"
+        android:layout_margin="20dp"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/tv_mensaje"
+            android:textSize="16dp"
+            android:text="..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+
+
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/borde2"
+        android:id="@+id/btn_crearnodo"
+        android:text="Crear Nodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+
+        android:background="@drawable/borde2"
+        android:id="@+id/btn_continuarnodo"
+        android:text=""
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5">
+
+
+    </Button>
+    <Button
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/btn_iniciar"
+        android:text="Iniciar dia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:id="@+id/btn_finalizar"
+        android:text="Finalizar dia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_nodos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+</LinearLayout>

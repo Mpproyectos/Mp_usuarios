@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+
+      android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_margin="10dp"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:background="#fff"
+
+
+                        android:padding="10dp"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_ncupon"
+                            android:textSize="16dp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="Cup. Nº 2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                        <TextView
+                            android:id="@+id/tv_codigo"
+                            android:textSize="16dp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="codigo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                        <TextView
+                            android:id="@+id/tv_fecha_cup"
+                            android:textSize="16dp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="11/02/19 !"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                        <TextView
+                           android:id="@+id/tv_hora_cup"
+                            android:textSize="16dp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="12:42"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/img_visto"
+                            android:visibility="gone"
+                            android:src="@drawable/visto_azul"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+
+
+                        </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+
+
+

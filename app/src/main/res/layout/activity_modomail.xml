@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modoadmin.modoestado">
+
+    <include layout="@layout/toolbar"></include>
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Modo Mail nueva notificación"
+            android:textColor="@color/black"
+            android:textSize="23dp" />
+        <Button
+            android:id="@+id/btn_modoactivado"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:textSize="24dp"
+            android:textColor="#fff"
+            android:background="@color/green"
+            android:text="Activado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_mododesactivado"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:background="@color/red"
+            android:text="Desactivado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Click en el boton para cambiar de modo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:text="Modo Mail  reservar."
+            android:textColor="@color/black"
+            android:textSize="23dp" />
+
+        <Button
+            android:id="@+id/btn_modoactivadocancelar"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:textSize="24dp"
+            android:textColor="#fff"
+            android:background="@color/green"
+            android:text="Activado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_mododesactivadocancelar"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:background="@color/red"
+            android:text="Desactivado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

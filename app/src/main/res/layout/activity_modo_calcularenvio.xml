@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".modoadmin.modoestado">
+
+    <include layout="@layout/toolbar"></include>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:text="Sistemas de envio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_negocio_abierto"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:textSize="24dp"
+            android:textColor="#fff"
+            android:background="@color/green"
+            android:text="Modo Activo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_negocio_cerrado"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:background="@color/red"
+            android:text="Modo Desactivado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Modo distancia y modo zona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="10dp"
+        android:layout_margin="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.bitvale.switcher.SwitcherX
+
+                android:checked="true"
+                android:id="@+id/switcher_modo_distancia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:switcher_on_color="@color/colorPrimary"
+                app:switcher_off_color="@color/gray"
+                app:switcher_icon_color="@color/white" />
+
+            <TextView
+
+                android:id="@+id/tv_modo_distancia"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="10dp"
+        android:layout_margin="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.bitvale.switcher.SwitcherX
+
+                android:checked="true"
+                android:id="@+id/switcher_modo_zona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:switcher_on_color="@color/colorPrimary"
+                app:switcher_off_color="@color/gray"
+                app:switcher_icon_color="@color/white" />
+
+            <TextView
+
+                android:id="@+id/tv_modo_zona"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_margin="14dp"
+        android:textColor="@color/black"
+        android:text="Modo cupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="10dp"
+        android:layout_margin="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.bitvale.switcher.SwitcherX
+
+                android:checked="true"
+                android:id="@+id/switcher_modo_cupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:switcher_on_color="@color/colorPrimary"
+                app:switcher_off_color="@color/gray"
+                app:switcher_icon_color="@color/white" />
+
+            <TextView
+
+                android:id="@+id/tv_modo_cupon"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

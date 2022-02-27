@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoapp"
+    android:gravity="center"
+    android:orientation="vertical"
+
+
+    tools:context=".loginapp.MainActivity">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:background="@drawable/logodisbos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+    <ImageView
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:background="@drawable/disboss"
+        android:layout_width="150dp"
+        android:layout_height="50dp">
+
+    </ImageView>
+
+
+
+    <TextView
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Registro con facebook:"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2" />
+    <com.facebook.login.widget.LoginButton
+
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.facebook.login.widget.LoginButton>
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>
+

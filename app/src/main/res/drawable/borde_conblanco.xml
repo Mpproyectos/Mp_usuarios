@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    androd:shape="rectangle"
+    xmlns:androd="http://schemas.android.com/apk/res/android">
+
+
+    <solid androd:color="@color/white">
+    </solid>
+    <corners androd:radius="12dp"></corners>
+    <stroke androd:width="2dp" androd:color="@color/colorPrimary"></stroke>
+
+</shape>

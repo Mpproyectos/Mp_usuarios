@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoapp"
+
+    tools:context=".clientes.contactoActivity">
+
+    <include layout="@layout/appbar_cool"></include>
+
+    <Button
+        android:id="@+id/btn_editarcontacto"
+        android:textAllCaps="false"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="6"
+        android:elevation="5dp"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:text="Editar"
+        android:background="@drawable/bgbtnopcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_marginTop="59dp"
+        android:textSize="40dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_direccion"
+        android:textAlignment="center"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/btn_msjwhatsapp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_message_black_24dp"
+            android:textColor="#ffff"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/borde"
+            android:text="Contactar via whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/btn_compartirubicacion"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_share_black_24dp"
+            android:textColor="#ffff"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/borde"
+            android:text=" ubicación del local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_telefonoadmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_ubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".modoadmin.Productos.editarproductoActivity">
+
+    <include layout="@layout/toolbar"></include>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Orden:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <EditText
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:layout_margin="10dp"
+                android:id="@+id/et_orden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:textColor="@color/white"
+        android:text="Actualizar Datos coctel"
+        android:background="@color/colorPrimary"
+        android:id="@+id/btn_actualizardatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+
+        android:layout_marginTop="24dp"
+        android:text="Cambiar Imagen"
+        android:background="@color/colorPrimary"
+        android:id="@+id/btn_actualizarfotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+
+        android:layout_marginTop="24dp"
+        android:text="Eliminar IMAGEN"
+        android:background="@color/colorPrimary"
+        android:id="@+id/btn_eliminarimagenCoctelimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    androd:shape="rectangle"
+    xmlns:androd="http://schemas.android.com/apk/res/android">
+
+    <padding
+        androd:bottom="5dp"
+        androd:top="5dp"
+        androd:right="5dp"
+        androd:left="5dp"/>
+
+    <solid androd:color="@color/colorPrimary"></solid>
+    <corners androd:radius="12dp"></corners>
+
+</shape>
