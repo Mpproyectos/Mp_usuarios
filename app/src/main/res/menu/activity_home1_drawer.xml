@@ -6,9 +6,9 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/mi_direccion"
-            android:icon="@drawable/ic_place_black_24dp"
-            android:title="Mis Datos" />
-        <item
+            android:icon="@drawable/ic_contact_mail_black_24dp"
+            android:title="Item test" />
+     <!--   <item
             android:id="@+id/cart"
             android:icon="@drawable/ic_shopping_cart_black_24dp"
             android:title="Carrito de compras" />
@@ -27,7 +27,7 @@
         <item
             android:id="@+id/contacto"
             android:icon="@drawable/ic_contact_mail_black_24dp"
-            android:title="Contacto" />
+            android:title="Contacto" />-->
     </group>
 
     <!--<item android:title="Communicate">

@@ -44,6 +44,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -119,7 +120,7 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
     ///------fin login
     Animation fromsmall;
 
-
+    LinearLayout linearload;
 
 
 
@@ -219,8 +220,9 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
             }
         });
 
+        linearload = findViewById(R.id.linearload);
         
-        probandofechas();
+        //probandofechas();
         
         cargarNodos();
         btn_continuarNodo = findViewById(R.id.btn_continuarnodo);
@@ -244,6 +246,8 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                             if(dataSnapshot.exists()){
+                                rv_nodos.setVisibility(View.VISIBLE);
+                                linearload.setVisibility(View.GONE);
                                 //---------
                                 String estado = dataSnapshot.child("estado").getValue(String.class);
                                 String notificacion1= dataSnapshot.child("notificacion1").getValue(String.class);
@@ -914,12 +918,7 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
             gologing();
             return true;
         }
-        if(id == R.id.politicas){
-            Uri uri = Uri.parse("http://rodadosnorte.com/deliveryapp/privacy_policy.html"); // missing 'http://' will cause crashed
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -936,13 +935,14 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
-                    finish();
-                    Intent i = new Intent(home1.this, misdatos.class);
-                    startActivity(i);
+                    //finish();
+                    //Intent i = new Intent(home1.this, misdatos.class);
+                    //startActivity(i);
+                    Toast.makeText(getApplicationContext(), "test", Toast.LENGTH_SHORT).show();
                 }
             }, 200);
 
-        } else if (id == R.id.cart) {
+        }/* else if (id == R.id.cart) {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
@@ -996,7 +996,7 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
 
 
     }
-
+*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

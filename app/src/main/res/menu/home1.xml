@@ -6,11 +6,7 @@
         android:orderInCategory="100"
         android:title="Cerrar sesion"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/politicas"
-        android:orderInCategory="100"
-        android:title="Politicas de uso"
-        app:showAsAction="never" />
+
 
 
 

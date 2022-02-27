@@ -105,8 +105,24 @@
         android:layout_height="wrap_content">
 
     </Button>
+    <LinearLayout
+        android:id="@+id/linearload"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
         android:id="@+id/rv_nodos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
