@@ -33,7 +33,7 @@
         android:textColor="@color/black"
         />
     <EditText
-
+        android:text="kreandoapp@gmail.com"
         android:layout_margin="10dp"
         android:padding="10dp"
         android:background="@color/colorPrimary"
@@ -44,6 +44,7 @@
 
     </EditText>
     <EditText
+        android:text="123456"
         android:layout_margin="10dp"
         android:padding="10dp"
         android:background="@color/colorPrimary"
