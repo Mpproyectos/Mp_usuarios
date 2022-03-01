@@ -19,6 +19,7 @@ import com.squareup.picasso.Picasso;
 import java.io.IOException;
 import java.util.Random;
 
+import kreandoapp.mpclientes.clientes.home1;
 import kreandoapp.mpclientes.clientes.misPedidos;
 import kreandoapp.mpclientes.clientes.promociones;
 import kreandoapp.mpclientes.clientes.satisActivity;
@@ -535,7 +536,7 @@ public class FcmMessaginService extends FirebaseMessagingService {
         return PendingIntent.getActivity(this,0,nf,0);
     }
     public PendingIntent iramodoadmin () {
-        Intent nf = new Intent(getApplicationContext(), ModoAdmin.class);
+        Intent nf = new Intent(getApplicationContext(), home1.class);
         nf.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         return PendingIntent.getActivity(this,0,nf,0);
     }

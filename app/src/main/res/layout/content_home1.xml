@@ -22,17 +22,19 @@
     <LinearLayout
 
         android:orientation="vertical"
-        android:gravity="center"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ProgressBar
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
         </ProgressBar>
 
         <TextView
+            android:layout_gravity="center"
             android:layout_margin="10dp"
             android:textColor="@color/black"
             android:id="@+id/tv_mensaje"
@@ -42,6 +44,30 @@
             android:layout_height="wrap_content">
 
         </TextView>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btn_error_nodo"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:background="@drawable/borde2"
+                    android:text="Error al crear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </Button>
+
+            </RelativeLayout>
+
+
 
 
 

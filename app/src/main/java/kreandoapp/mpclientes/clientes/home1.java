@@ -150,7 +150,7 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
     ArrayList<SliderItem> lista_slider;
     Button btn;
 
-    Button btn_crearNodo,btn_continuarNodo;
+    Button btn_crearNodo,btn_continuarNodo,btn_error_nodo;
 
     private DatabaseReference categoriaref;
     private DatabaseReference lastnodoref;
@@ -166,6 +166,9 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
     ArrayList<ModeloNodo> nodosArrayList;
 
     String tiempo_t;
+    String nombre_supervisor_home;
+    String id_supervisor_home;
+    String nombre_nodo_home;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -226,6 +229,7 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
         
         cargarNodos();
         btn_continuarNodo = findViewById(R.id.btn_continuarnodo);
+        btn_error_nodo = findViewById(R.id.btn_error_nodo);
 
         DatabaseReference myRef552 = database.getReference();
         Query query = myRef552.child("LastNodo").child(user.getUid());
@@ -260,18 +264,22 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
                                 String idnodo= dataSnapshot.child("idnodo").getValue(String.class);
                                 String inicio_nodo= dataSnapshot.child("inicio_nodo_time").getValue(String.class);
 
+                                nombre_supervisor_home = nombre_supervisor;
+                                id_supervisor_home = id_supervisor;
+                                nombre_nodo_home = nombre_nodo;
 
                                 if(notificacion1.equals("si") && autorizacion1.equals("no") && estado.equals("trabajando")){
 
                                     card_texto.setVisibility(View.VISIBLE);
                                     tv_mensaje.setText("Esperando autorización de supervisor por creación Nodo: "+nombre_nodo);
                                     btn_continuarNodo.setVisibility(View.GONE);
+                                    btn_error_nodo.setVisibility(View.VISIBLE);
                                 }
                                 if(notificacion1.equals("si") && autorizacion1.equals("ok") && estado.equals("trabajando")){
                                     btn_continuarNodo.setText("Continuar nodo: " + nombre_nodo);
                                     btn_continuarNodo.setVisibility(View.VISIBLE);
                                     card_texto.setVisibility(View.GONE);
-
+                                    btn_error_nodo.setVisibility(View.GONE);
 
                                     btn_continuarNodo.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -305,6 +313,7 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
                                     card_texto.setVisibility(View.VISIBLE);
                                     tv_mensaje.setText("Esperando autorización de supervisor por Nodo finalizado");
                                     btn_continuarNodo.setVisibility(View.GONE);
+                                    btn_error_nodo.setVisibility(View.GONE);
                                 }
 
                                 if(notificacion2.equals("si") && autorizacion2.equals("ok") && estado.equals("finalizado") ){
@@ -312,12 +321,14 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
                                     btn_crearNodo.setVisibility(View.VISIBLE);
                                     tv_mensaje.setVisibility(View.GONE);
                                     btn_continuarNodo.setVisibility(View.GONE);
+                                    btn_error_nodo.setVisibility(View.GONE);
                                 }
                                 //---------
                             }else{
                                 card_texto.setVisibility(View.GONE);
                                 btn_crearNodo.setVisibility(View.VISIBLE);
                                 tv_mensaje.setVisibility(View.GONE);
+                                btn_error_nodo.setVisibility(View.GONE);
                             }
 
                         }
@@ -343,6 +354,12 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
         });
 
 
+        btn_error_nodo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mostrardialog_error_nodo();
+            }
+        });
 
 
 
@@ -630,7 +647,32 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
        });
     }
 
+    private void notificarsupervisor_error_nodo(String idsuper,String nodo) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Tokens").child(idsuper).child("token");
 
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String token = dataSnapshot.getValue(String.class);
+                if(dataSnapshot.exists()){
+                    claseSendVolleyFCM clase = new claseSendVolleyFCM();
+                    clase.volleyfcm_sinfoto("Usuario "+ user.getEmail() +"","necesita cancelar el nodo: "+nodo,token,"modoadmin");
+                    Toast.makeText(getApplicationContext(), "Supervisor notificado", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+    }
 
     private void userface() {
         FirebaseDatabase database2 = FirebaseDatabase.getInstance();
@@ -1016,7 +1058,41 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
         startActivity(i);
     }
 
+    private void mostrardialog_error_nodo() {
+        AlertDialog.Builder mbuilder = new AlertDialog.Builder(home1.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_error_en_nodo,null);
 
+        TextView tv_nombre_nodo = view.findViewById(R.id.tv_nombre_nodo);
+        TextView tv_texto = view.findViewById(R.id.tv_texto_dialog);
+
+        tv_texto.setText("Seguro quieres Notificar al supervisor "+ nombre_supervisor_home +
+                " por el nodo: "+ nombre_nodo_home+" creado por error?");
+
+        tv_nombre_nodo.setText(nombre_nodo_home);
+        Button btn_cancelar = view.findViewById(R.id.btn_cancelar);
+        Button btn_actualizar = view.findViewById(R.id.btn_actualizar);
+
+
+        mbuilder.setCancelable(false);
+        mbuilder.setView(view);
+        AlertDialog dialog = mbuilder.create();
+        dialog.show();
+
+        btn_cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btn_actualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                notificarsupervisor_error_nodo(id_supervisor_home,nombre_nodo_home);
+                //Notificar a supervisor X
+            }
+        });
+    }
 
 
 
