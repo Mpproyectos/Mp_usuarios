@@ -1089,6 +1089,7 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
             @Override
             public void onClick(View v) {
                 notificarsupervisor_error_nodo(id_supervisor_home,nombre_nodo_home);
+                dialog.dismiss();
                 //Notificar a supervisor X
             }
         });
