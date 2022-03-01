@@ -594,6 +594,8 @@ public class home1 extends AppCompatActivity implements NavigationView.OnNavigat
                         ModeloNodo prod = snapshot.getValue(ModeloNodo.class);
 
                         if(prod.getAutorizacion2().equals("ok")){
+                            rv_nodos.setVisibility(View.VISIBLE);
+                            linearload.setVisibility(View.GONE);
                             nodosArrayList.add(prod);
                         }
 
